@@ -2,7 +2,10 @@ import { useRouter } from "next/router";
 import { useCallback, useMemo } from "react";
 import { formatDistanceToNowStrict } from "date-fns";
 import Avatar from "../Avatar";
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+>>>>>>> main
 
 interface CommentItemProps {
   data: Record<string, any>;
@@ -68,6 +71,7 @@ const CommentItem: React.FC<CommentItemProps> = ({ data = {} }) => {
             </span>
             <span className="text-neutral-500 text-sm">{createdAt}</span>
           </div>
+<<<<<<< HEAD
           <div className="text-white mt-1">
             {data.body}
             {data.image && (
@@ -82,6 +86,9 @@ const CommentItem: React.FC<CommentItemProps> = ({ data = {} }) => {
               </div>
             )}
           </div>
+=======
+          <div className="text-white mt-1">{data.body}</div>
+>>>>>>> main
         </div>
       </div>
     </div>

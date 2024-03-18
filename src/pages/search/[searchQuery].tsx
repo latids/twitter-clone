@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+<<<<<<< HEAD
+=======
+import axios from "axios";
+>>>>>>> main
 import SearchItem from "@/components/search/SearchItem";
 import Header from "@/components/Header";
 import { ClipLoader } from "react-spinners";

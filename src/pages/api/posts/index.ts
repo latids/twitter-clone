@@ -13,12 +13,19 @@ export default async function handler(
   try {
     if (req.method === "POST") {
       const { currentUser } = await serverAuth(req, res);
+<<<<<<< HEAD
       const { body, image } = req.body;
+=======
+      const { body } = req.body;
+>>>>>>> main
 
       const post = await prisma.post.create({
         data: {
           body,
+<<<<<<< HEAD
           image,
+=======
+>>>>>>> main
           userId: currentUser.id,
         },
       });
@@ -44,6 +51,7 @@ export default async function handler(
             createdAt: "desc",
           },
         });
+<<<<<<< HEAD
       } else if (req.query.postId) {
         posts = await prisma.post.findMany({
           where: {
@@ -54,6 +62,8 @@ export default async function handler(
             comments: true,
           },
         });
+=======
+>>>>>>> main
       } else {
         posts = await prisma.post.findMany({
           include: {

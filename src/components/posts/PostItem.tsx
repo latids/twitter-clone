@@ -12,7 +12,10 @@ import useLike from "@/hooks/useLike";
 import Avatar from "../Avatar";
 import axios from "axios";
 import { useRouter } from "next/router";
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+>>>>>>> main
 
 interface PostItemProps {
   data: Record<string, any>;
@@ -102,7 +105,11 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
       </div>
     );
   };
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> main
   return (
     <div
       onClick={goToPost}
@@ -156,6 +163,7 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
             )}
           </div>
           <div className="text-white mt-1">{data.body}</div>
+<<<<<<< HEAD
           {data.image && (
             <div className="mt-3">
               <Image
@@ -167,6 +175,8 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
               />
             </div>
           )}
+=======
+>>>>>>> main
           <div className="flex flex-row items-center mt-3 gap-10">
             <div
               className="
