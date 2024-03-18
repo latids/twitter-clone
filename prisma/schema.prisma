@@ -11,25 +11,16 @@ datasource db {
 }
 
 model User {
-<<<<<<< HEAD
   id              String         @id @default(auto()) @map("_id") @db.ObjectId
   name            String?
   username        String?        @unique
   bio             String?
   email           String?        @unique
-=======
-  id              String    @id @default(auto()) @map("_id") @db.ObjectId
-  name            String?
-  username        String?   @unique
-  bio             String?
-  email           String?   @unique
->>>>>>> main
   emailVerified   DateTime?
   image           String?
   coverImage      String?
   profileImage    String?
   hashedPassword  String?
-<<<<<<< HEAD
   createdAt       DateTime       @default(now())
   updatedAt       DateTime       @updatedAt
   followingIds    String[]       @db.ObjectId
@@ -37,15 +28,6 @@ model User {
   posts           Post[]
   comments        Comment[]
   notifications   Notification[]
-=======
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
-  followingIds    String[]  @db.ObjectId
-  hasNotification Boolean?
-  posts         Post[]
-  comments      Comment[]
-  notifications Notification[]
->>>>>>> main
 }
 
 model Post {
@@ -56,12 +38,7 @@ model Post {
   userId    String   @db.ObjectId
   likedIds  String[] @db.ObjectId
   image     String?
-<<<<<<< HEAD
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-=======
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
->>>>>>> main
 
   comments Comment[]
 }
@@ -73,15 +50,9 @@ model Comment {
   updatedAt DateTime @updatedAt
   userId    String   @db.ObjectId
   postId    String   @db.ObjectId
-<<<<<<< HEAD
   image     String?
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
-=======
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-  post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
->>>>>>> main
 }
 
 model Notification {
@@ -91,8 +62,4 @@ model Notification {
   createdAt DateTime @default(now())
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main
