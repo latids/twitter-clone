@@ -12,11 +12,7 @@ export default async function handler(
 
   try {
     const { currentUser } = await serverAuth(req, res);
-<<<<<<< HEAD
     const { body, image } = req.body;
-=======
-    const { body } = req.body;
->>>>>>> main
     const { postId } = req.query;
 
     if (!postId || typeof postId !== "string") {
@@ -26,10 +22,7 @@ export default async function handler(
     const comment = await prisma.comment.create({
       data: {
         body,
-<<<<<<< HEAD
         image,
-=======
->>>>>>> main
         userId: currentUser.id,
         postId,
       },
