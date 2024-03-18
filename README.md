@@ -1,6 +1,6 @@
 # Twitter-clone Project
 
-- live demo "https://twitter-clone-fntajcvcm-latids-projects.vercel.app"
+- live demo "https://twitter-clone-ten-pearl.vercel.app"
 
 ## Technologies & Tools Used
 - Next.js
