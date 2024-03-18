@@ -6,13 +6,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
   if (req.method !== "POST") {
     return res.status(405).end();
   }
-=======
- if (req.method !== "POST") {return res.status(405).end();};
->>>>>>> main
 
   try {
     const { email, username, name, password } = req.body;
@@ -35,12 +31,8 @@ export default async function handler(
     return res.status(200).json(user);
   } catch (error: any) {
     console.log(error);
-<<<<<<< HEAD
     return res
       .status(400)
       .json({ error: "Registration failed, try different  credentials" });
-=======
-    return res.status(400).json({ error: error.message });
->>>>>>> main
   }
 }
